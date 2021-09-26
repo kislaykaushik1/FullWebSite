@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Yaldevi', sans-serif;
+}
+
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.5),#b8f5ed) ,url(https://wallpaperaccess.com/full/2489626.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+}
+.banner-text{
+    text-align: center;
+    color:  white;
+    padding-top: 170px;
+}
+.banner-text h1{
+    font-size: 130px;
+}
+.banner-text p{
+    font-size: 30px;
+    font-style: italic;
+}
+
+.banner-btn{
+    margin: 70px auto 0;
+}
+.banner-btn a{
+    width: 150px;
+    text-decoration: none; 
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color:white;
+    border : .5px solid white;
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s;
+}
+
+.banner-btn a span{
+    width: 0;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: -1;
+    transition: 0.4s;
+    
+}
+.banner-btn a:hover span{
+    width: 100%;
+
+}
+.banner-btn a:hover{
+    color: black;
+    
+}
+@media screen and (max-width: 770px){
+    .banner-text h1{
+        font-size: 50px;
+    }
+    .banner-btn a{
+        display:block;
+        margin: 20px auto;
+    }
+}
+/*--feature--*/
+#features{
+    width:100%;
+    padding: 70px 0;
+}
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.title-text p{
+    margin: auto;
+    font-size: 20px;
+    color:#009688;
+    font-weight:bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.title-text p::after{
+    content: '';
+    width:50px;
+    height :35px;
+    background: linear-gradient(#019587,rgb(255, 251, 251));
+    position: absolute;
+    top:-35px;
+    left:0;
+    z-index:-1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.title-text h1{
+    font-size:50px;
+}
+.feature-box{
+    width:80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.feature{
+    flex-basis: 40%;
+    padding: 0 20px;
+}
+.feature-img{
+    flex-basis: 50%;
+    margin: auto;
+}
+.feature-img img{
+    width:80%;
+    border-radius: 10px;
+}
+.feature h1{
+    text-align:left;
+    margin-bottom: 10px;
+    font-weight:100;
+    color:#009688;
+}
+
+.feature-desc{
+    display:flex;
+    align-items: center;
+    margin-bottom: 40px;
+    
+}
+.feature-icon .fa{
+    width:50px;
+    height: 50px;
+    font-size: 30px;
+    line-height:50px;
+    border-radius: 8px;
+    color:#31ffea;
+    border: 1px solid #009688;
+}
+.feature-text p{
+    padding: 0 20px;
+    display:flex;
+    text-align: inherit;
+}
+@media screen and (max-width: 770px){
+    .title-text h1{
+        font-size: 35px;
+    }
+    .feature{
+        flex-basis:100%;
+    }
+
+    .feature-img{
+        flex-basis: 100%;
+    }
+    .feature-img img{
+        width:100%;
+    }
+}
+/*-- Services--*/
+#service{
+    width:100%;
+    padding: 70px 0;
+    background: rgb(255, 228, 228);
+}
+.service-box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.first{
+    flex-basis:48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color:white;
+    position: relative;
+}
+.first img{
+    width:80%;
+    border-radius: 7px;
+}
+.overlay{
+    margin-left: 10%;
+    width:80%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),#b8f5ed);
+    opacity:0;
+    transition: 0.5s;
+}
+.first:hover .overlay{
+    opacity: 1;
+}
+.service-desc{
+    width:80%;
+    position: absolute;
+    bottom:0;
+    left:50%;
+    opacity: 0;
+    translate: 0.5s;
+    cursor: pointer;
+    transform:translateX(-50%);
+
+}
+hr{
+    background: white;
+    height:3px;
+    border:0;
+    margin:15px auto;
+    width:60%;
+}
+.first:hover .service-desc{
+    bottom:25%;
+    opacity: 1;
+}
+@media screen and (max-width:770px) {
+    .first{
+        flex-basis:80%;
+        margin-bottom: 30px;
+    }
+    .first p{
+        font-size: 12px;
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .first:hover .service-desc{
+        bottom:20% !important;
+    }
+}
+
+/*--Pricing--*/
+#Pricing{
+    width: 100%;
+    padding :70px 0;
+}
+.table1 td{
+    height:80px;
+    width: 200px;
+    border:black solid 1px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 20px;
+}
+.table1 th{
+    height:80px;
+    width: 400px;
+    border:black solid 1px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 30px;
+}
+.table1 table{
+    background: linear-gradient(rgba(0,0,0,0.5),#b8f5ed);
+    border:black solid 1px;
+    border-collapse: collapse;
+    margin:10px auto;
+}
+@media screen and (max-width:770px) {
+    .table1 td{
+       
+        font-size: 12px;
+    }
+    .table1{
+        margin: auto;
+        width: 80%;
+        
+    }
+    .table1 th{
+        
+        font-size: 15px;
+    }
+}
+
+
+#contact{
+    padding: 70px 0;
+    background-color: #efefef;
+}
+.contact1{
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.social{
+    text-align:center
+}
+
+
